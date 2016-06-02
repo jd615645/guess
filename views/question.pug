@@ -1,0 +1,29 @@
+extends layout
+block css
+  link(rel='stylesheet', href='./css/question.css')
+block content
+  .main
+    .question
+      .ui.container
+        form.ui.form
+          h1 請輸入題目及第一個提示
+          .field#question
+            label Question
+            input(type='text')
+          .field.prompt
+            label 提示 1
+            input(type='text')
+          .ui.blue.submit.button Submit
+    .key_prompt
+      .ui.container
+        form.ui.form
+          h1#ans Ans
+          h1 請輸入提示
+          .field.prompt
+            label 提示 2
+            input(type='text')
+          .ui.olive.submit.button Submit
+          .ui.red.submit.button Show Ans
+block append js
+  script(src='/socket.io/socket.io.js')
+  script(src='/js/question.js')

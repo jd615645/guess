@@ -1,0 +1,16 @@
+extends layout
+block css
+  link(rel='stylesheet', href='./css/index.css')
+block content
+  .problem
+    ul 
+      //- li 我是第1個
+  .ui.modal
+    i.close.icon
+    .header 公佈答案 ヽ(✿ﾟ▽ﾟ)ノ
+    .content
+      h1#ans ヽ(✿ﾟ▽ﾟ)ノ
+
+block append js
+  script(src='/socket.io/socket.io.js')
+  script(src='/js/main.js')
